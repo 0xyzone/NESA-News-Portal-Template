@@ -8,7 +8,7 @@ module.exports = {
       },
       colors: {
         "amber" : "#d97706",
-        "neutral" : "#0a0a0a"
+        "neutral" : "#171717"
       }
     },
   },
