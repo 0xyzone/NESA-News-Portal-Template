@@ -12,11 +12,133 @@
       src="https://kit.fontawesome.com/0a09f83869.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="/public/mock/mock-games.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="/public/js/script.js"></script>
   </head>
-  <body>
+  <body class="font-open-sans">
     <div
-      class="font-josefin-sans px-10 md:px-20 xl:px-32 py-5 min-w-screen w-full min-h-svh h-full bg-black text-white"
+      class="px-10 md:px-20 xl:px-32 py-5 min-w-screen w-full min-h-svh h-full bg-black text-white"
     >
+    <nav class="bg-transparent flex justify-center w-full bg-neutral-950">
+      <div class="hidden lg:flex items-center gap-8 font-medium text-base">
+        <a
+          href="./index.html"
+          class="hover:text-primary transform ease-in-out duration-200"
+          >Home</a
+        >
+        <a
+          href="./about-page.html"
+          class="hover:text-primary transform ease-in-out duration-200"
+          >About Us</a
+        >
+        <a
+          href="./events-page.html"
+          class="hover:text-primary transform ease-in-out duration-200"
+          >Events</a
+        >
+        <a href="./index.html"
+          ><img
+            src="/public/images/logo/light-nesa-logo.png"
+            alt="Nesa Logo"
+            class="h-20 object-contain"
+        /></a>
+        <a
+          href="./news-page.html"
+          class="hover:text-primary transform ease-in-out duration-200"
+          >News</a
+        >
+        <a
+          href="./contact-page.html"
+          class="hover:text-primary transform ease-in-out duration-200"
+          >Contact Us</a
+        >
+        <a
+          href="./certificate-page.html"
+          class="hover:text-primary transform ease-in-out duration-200"
+          >Certificates</a
+        >
+      </div>
+      <div class="flex lg:hidden justify-between w-full items-center pr-2">
+        <a href="#"
+          ><img
+            src="/public/images/logo/light-nesa-logo.png"
+            alt="Nesa Logo"
+            class="h-20 object-scale-down"
+        /></a>
+        <button
+          id="open-mobile-nav"
+          class="bg-black text-white border-0 hover:scale-105 cursor-pointer transform duration-300 ease-in-out"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div
+      id="mobile-navbar"
+      class="hidden lg:hidden z-50 fixed h-full w-full inset-0 bg-black bg-opacity-60"
+    >
+      <div class="flex w-full h-full">
+        <div class="w-1/4 sm:1/3 md:w-1/2 h-full"></div>
+        <div
+          class="w-3/4 sm:2/3 md:w-1/2 bg-black/30 backdrop-blur-xl h-full text-white"
+        >
+          <div class="flex flex-col gap-2 p-10 text-xl text-center">
+            <a href="#" class="flex justify-center mb-10"
+              ><img
+                src="/public/images/logo/light-nesa-logo.png"
+                alt="Nesa Logo"
+                class="h-20 object-scale-down"
+            /></a>
+            <a
+              href="./index.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Home</a
+            >
+            <a
+              href="./about-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >About Us</a
+            >
+            <a
+              href="./games-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Games</a
+            >
+            <a
+              href="./events-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Events</a
+            >
+            <a
+              href="./news-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >News</a
+            >
+            <a
+              href="./contact-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Contact Us</a
+            >
+            <a
+              href="./certificate-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Certificates</a
+            >
+            <button
+              id="close-mobile-nav"
+              class="text-4xl mt-5 bg-transparent text-white border-none"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
       <div class="mt-10 flex justify-end">
         <div class="relative h-[350px] w-[80%]">
           <img
@@ -40,7 +162,7 @@
           >
             <div class="flex flex-col gap-5">
               <h1 class="text-3xl md:text-5xl xl:text-6xl font-bold">
-                <span class="text-amber">Top Nepal </span><br /><span
+                <span class="text-primary">Top Nepal </span><br /><span
                   >Esports Games</span
                 >
               </h1>
@@ -48,53 +170,94 @@
           </div>
           <div class="absolute -bottom-0 right-0 text-center z-20">
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold">
-              <span class="text-amber">Featured</span><span>Games</span>
+              <span class="text-primary">Featured</span><span>Games</span>
             </h1>
           </div>
         </div>
       </div>
 
-      <div class="font-open-sans mt-10 px-10 md:px-20 2xl:px-52">
-        <div class="flex flex-col sm:flex-row">
-          <div class="h-[250px] w-[300px] 2xl:h-[300px] 2xl:w-[350px] shadow-white shadow-lg">
-            <img
-              src="/public/images/games/pes.jpg"
-              alt=""
-              class="h-full w-full object-cover"
-            />
-          </div>
-          <div class="mt-5 h-full w-full sm:w-[500px] bg-neutral">
-            <div class="py-5 px-0 sm:px-10 text-white flex flex-col">
-              <h1 class="text-3xl">eFootball</h1>
-              <p class="text-sm 2xl:text-base">
-                Renowned for its dedication to realism boasting licensed teams,
-                players, and stadiums from prominent leagues globally, offering
-                fans an immersive football experience.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div
+        id="games-container"
+        class="mt-10 px-10 md:px-20 2xl:px-52"
+      >
 
-        <div class="h-full flex flex-col sm:flex-row-reverse">
-          <div class="h-[250px] w-[300px] 2xl:h-[300px] 2xl:w-[350px] shadow-white shadow-lg">
-            <img
-              src="/public/images/games/csgo.jpeg"
-              alt=""
-              class="h-full w-full object-cover"
-            />
-          </div>
-          <div class="mt-5 h-full w-full sm:w-[500px] bg-neutral">
-            <div class="py-5 px-0 sm:px-10 text-white flex flex-col">
-              <h1 class="text-3xl">CSGO</h1>
-              <p class="text-sm 2xl:text-base">
-                renowned for its precision and tactical gameplay. The game
-                features a variety of maps and modes, each requiring strategic
-                planning and sharp shooting skills.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
+
+      <!-- footer -->
+      <footer
+        class="mt-10 flex flex-col items-center justify-center py-5 gap-3 bg-neutral-950"
+      >
+        <a href="#"
+          ><img
+            src="/public/images/logo/light-nesa-logo.png"
+            alt="Nesa Logo"
+            class="h-20 object-scale-down"
+        /></a>
+        <nav class="bg-transparent flex justify-center w-full">
+          <div class="hidden lg:flex items-center gap-8 font-medium text-base">
+            <a href="./index.html" class="hover:text-primary transform ease-in-out duration-200">Home</a>
+            <a href="./about-page.html" class="hover:text-primary transform ease-in-out duration-200">About Us</a>
+            <a href="./events-page.html" class="hover:text-primary transform ease-in-out duration-200">Events</a>
+            <a href="./games-page.html" class="hover:text-primary transform ease-in-out duration-200">Games</a>
+            <a href="./news-page.html" class="hover:text-primary transform ease-in-out duration-200">News</a>
+            <a href="./contact-page.html" class="hover:text-primary transform ease-in-out duration-200">Contact Us</a>
+            <a href="./certificate-page.html" class="hover:text-primary transform ease-in-out duration-200">Certificates</a>
+          </div>
+        </nav>
+        <div class="text-2xl flex gap-5">
+          <a
+            href="#"
+            class="p-1 text-white hover:scale-125 duration-200 transform ease-in-out"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a
+            href="#"
+            class="p-1 text-white hover:scale-125 duration-200 transform ease-in-out"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+          <a
+            href="#"
+            class="p-1 text-white hover:scale-125 duration-200 transform ease-in-out"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+        <p class="text-sm text-gray-500 flex gap-2">
+          © 2024 NESA . <a href="#" class="text-white"> Privacy Policy</a>
+        </p>
+      </footer>
     </div>
   </body>
+  <script>
+    const games_container = document.getElementById("games-container");
+    const gamesDivs = mock_games.map(
+      (games, i) => `
+        <div class="flex flex-col items-center ${
+          i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+        } ">
+          <div
+            class="h-[250px] w-[300px] 2xl:h-[300px] 2xl:w-[350px] shadow-white shadow-lg"
+          >
+            <img
+              src="/public/images/games/${games.game_image}.webp"
+              alt=""
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <div class="mt-5 mb-5 h-full w-full sm:w-[500px] bg-[#171717]">
+            <div
+              class="py-2 sm:py-5 px-2 sm:px-10 text-white flex flex-col backdrop-blur-sm ${
+                i % 2 !== 0 ? "text-right" : "text-left"
+              }"
+            >
+              <h1 class="text-3xl">${games.game_name}</h1>
+              <p class="mt-2 text-sm 2xl:text-base font-light text-justify">
+                ${games.game_description}
+              </p>
+            </div>
+          </div>
+        </div>
+    `
+    );
+    games_container.innerHTML = gamesDivs.join("");
+  </script>
 </html>

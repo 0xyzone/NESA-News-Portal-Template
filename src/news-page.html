@@ -11,12 +11,134 @@
       src="https://kit.fontawesome.com/0a09f83869.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="/public/mock/mock-news.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="/public/js/script.js"></script>
   </head>
-  <body>
+  <body class="font-open-sans">
     <div
-      class="font-josefin-sans px-10 md:px-20 xl:px-32 py-5 min-w-screen w-full min-h-svh h-full bg-black text-white"
+      class="px-10 md:px-20 xl:px-32 py-5 min-w-screen w-full min-h-svh h-full bg-black text-white"
     >
-      <div class="mt-10 flex justify-end">
+    <nav class="bg-transparent flex justify-center w-full bg-neutral-950">
+      <div class="hidden lg:flex items-center gap-8 font-medium text-base">
+        <a
+          href="./index.html"
+          class="hover:text-primary transform ease-in-out duration-200"
+          >Home</a
+        >
+        <a
+          href="./about-page.html"
+          class="hover:text-primary transform ease-in-out duration-200"
+          >About Us</a
+        >
+        <a
+          href="./events-page.html"
+          class="hover:text-primary transform ease-in-out duration-200"
+          >Events</a
+        >
+        <a href="./index.html"
+          ><img
+            src="/public/images/logo/light-nesa-logo.png"
+            alt="Nesa Logo"
+            class="h-20 object-contain"
+        /></a>
+        <a
+          href="./news-page.html"
+          class="hover:text-primary transform ease-in-out duration-200"
+          >News</a
+        >
+        <a
+          href="./contact-page.html"
+          class="hover:text-primary transform ease-in-out duration-200"
+          >Contact Us</a
+        >
+        <a
+          href="./certificate-page.html"
+          class="hover:text-primary transform ease-in-out duration-200"
+          >Certificates</a
+        >
+      </div>
+      <div class="flex lg:hidden justify-between w-full items-center pr-2">
+        <a href="#"
+          ><img
+            src="/public/images/logo/light-nesa-logo.png"
+            alt="Nesa Logo"
+            class="h-20 object-scale-down"
+        /></a>
+        <button
+          id="open-mobile-nav"
+          class="bg-black text-white border-0 hover:scale-105 cursor-pointer transform duration-300 ease-in-out"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div
+      id="mobile-navbar"
+      class="hidden lg:hidden z-50 fixed h-full w-full inset-0 bg-black bg-opacity-60"
+    >
+      <div class="flex w-full h-full">
+        <div class="w-1/4 sm:1/3 md:w-1/2 h-full"></div>
+        <div
+          class="w-3/4 sm:2/3 md:w-1/2 bg-black/30 backdrop-blur-xl h-full text-white"
+        >
+          <div class="flex flex-col gap-2 p-10 text-xl text-center">
+            <a href="#" class="flex justify-center mb-10"
+              ><img
+                src="/public/images/logo/light-nesa-logo.png"
+                alt="Nesa Logo"
+                class="h-20 object-scale-down"
+            /></a>
+            <a
+              href="./index.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Home</a
+            >
+            <a
+              href="./about-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >About Us</a
+            >
+            <a
+              href="./games-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Games</a
+            >
+            <a
+              href="./events-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Events</a
+            >
+            <a
+              href="./news-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >News</a
+            >
+            <a
+              href="./contact-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Contact Us</a
+            >
+            <a
+              href="./certificate-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Certificates</a
+            >
+            <button
+              id="close-mobile-nav"
+              class="text-4xl mt-5 bg-transparent text-white border-none"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- <div class="mt-10 flex justify-end">
         <div class="relative h-[350px] w-[80%]">
           <img
             src="/public/images/banners/news-banner.jpg"
@@ -39,25 +161,25 @@
           >
             <div class="flex flex-col gap-5">
               <h1 class="text-3xl md:text-5xl xl:text-6xl font-bold">
-                <span class="text-amber">Esports </span><span>News</span>
+                <span class="text-primary">Esports </span><span>News</span>
               </h1>
             </div>
           </div>
           <div class="absolute -bottom-10 right-0 text-center z-20">
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold">
-              <span class="text-amber">Nepal's Esports </span><br /><span
+              <span class="text-primary">Nepal's Esports </span><br /><span
                 >Legacy Grows</span
               >
             </h1>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="mt-20 sm:mt-32">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <div class="relative flex flex-col items-center justify-center">
+      <div class="mt-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+          <div class="relative flex flex-col">
             <div
-              class="h-[440px] sm:h-[500px] 2xl:h-[580px] w-80 sm:w-[440px] 2xl:w-[520px] flex flex-col rounded-xl overflow-hidden shadow-white shadow-lg z-[1]"
+              class="h-max w-full flex flex-col overflow-hidden border-solid border-gray-900"
             >
               <div class="h-1/2 w-full">
                 <img
@@ -66,119 +188,251 @@
                   class="w-full h-full object-cover"
                 />
               </div>
-              <div class="h-full flex flex-col gap-2 2xl:gap-3 py-3 px-5 bg-white">
-                <p class="text-amber text-lg sm:text-xl 2xl:text-2xl font-semibold">
+              <div
+                class="h-full flex flex-col gap-2 2xl:gap-3 py-3 px-5 bg-white"
+              >
+                <h1
+                  class="font-bold text-primary text-lg sm:text-xl 2xl:text-2xl"
+                >
                   Elevate Your Riding Experience with the Latest Innovations
-                </p>
-                <p class="text-xs sm:text-sm text-black">
+                </h1>
+                <h6 class="text-xs sm:text-sm text-gray-900">
                   BY Nepal Esports IESF, News . MAY 15, 2023
-                </p>
+                </h6>
                 <p class="text-sm 2xl:text-base text-gray-600">
-                  Lorem Ipsum is simply dummy text of the printing and
+                  m run Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry’s
                   standard dummy text ever since the 1500s, when book.
                 </p>
                 <button
-                  class="text-sm 2xl:text-base px-5 py-3 w-max border border-amber text-amber bg-white rounded-xl"
+                  class="text-sm 2xl:text-base px-5 py-3 w-max border border-solid border-primary text-primary bg-white hover:text-white hover:bg-primary transform ease-in-out duration-300 rounded-xl"
                 >
                   Continue Reading
                 </button>
               </div>
             </div>
-            <div
+            <!-- <div
               class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-0"
             >
               <div
                 class="h-[420px] sm:h-[500px] w-80 sm:w-[440px] 2xl:h-[580px] 2xl:w-[520px] flex flex-col rounded-xl overflow-hidden shadow-white shadow-lg bg-white opacity-50 rotate-[10deg]"
               ></div>
-            </div>
+            </div> -->
           </div>
-          <div class="flex flex-col items-center justify-center">
-            <div class="bg-black py-5 px-10 w-full">
-              <div class="flex flex-col gap-5 w-full">
-                <h1 class="text-2xl text-amber uppercase font-passero-one">
-                  recent news
-                </h1>
-                <div class="flex gap-2">
-                  <div class="h-20">
-                    <img
-                      src="/public/images/news/news-card.jpg"
-                      alt=""
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div class="flex flex-col gap-2">
-                    <h1 class="font-semibold">
-                      Unleash Your Adventure: Taking a Look at the City Surfer
-                    </h1>
-                    <h1 class="font-medium text-gray-600">June 21, 2023</h1>
-                  </div>
+          <div class="flex flex-col items-center">
+            <div class="bg-black px-0 lg:px-5 w-full">
+              <div class="flex flex-col gap-3 w-full">
+                <div class="w-full flex items-center gap-5 pb-2">
+                  <h1 class="text-4xl">
+                    <span class="text-primary">Latest </span> News
+                  </h1>
+                  <hr class="flex-1 h-1 bg-primary border-0" />
                 </div>
-                <div class="flex gap-2">
-                  <div class="h-20">
-                    <img
-                      src="/public/images/news/news-card.jpg"
-                      alt=""
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div class="flex flex-col gap-2">
-                    <h1 class="font-semibold">
-                      Unleash Your Adventure: Taking a Look at the City Surfer
-                    </h1>
-                    <h1 class="font-medium text-gray-600">June 21, 2023</h1>
-                  </div>
-                </div>
-                <div class="flex gap-2">
-                  <div class="h-20">
-                    <img
-                      src="/public/images/news/news-card.jpg"
-                      alt=""
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div class="flex flex-col gap-2">
-                    <h1 class="font-semibold">
-                      Unleash Your Adventure: Taking a Look at the City Surfer
-                    </h1>
-                    <h1 class="font-medium text-gray-600">June 21, 2023</h1>
-                  </div>
-                </div>
-                <div class="flex gap-2">
-                  <div class="h-20">
-                    <img
-                      src="/public/images/news/news-card.jpg"
-                      alt=""
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div class="flex flex-col gap-2">
-                    <h1 class="font-semibold">
-                      Unleash Your Adventure: Taking a Look at the City Surfer
-                    </h1>
-                    <h1 class="font-medium text-gray-600">June 21, 2023</h1>
-                  </div>
-                </div>
-                <div class="flex gap-2">
-                  <div class="h-20">
-                    <img
-                      src="/public/images/news/news-card.jpg"
-                      alt=""
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div class="flex flex-col gap-2">
-                    <h1 class="font-semibold">
-                      Unleash Your Adventure: Taking a Look at the City Surfer
-                    </h1>
-                    <h1 class="font-medium text-gray-600">June 21, 2023</h1>
-                  </div>
+                <div id="recent-news-container" class="flex flex-col gap-3">
+                  <!-- script below -->
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="flex flex-col lg:flex-row gap-16 mt-10">
+        <div class="">
+          <div class="w-full flex items-center gap-5 pb-2">
+            <h1 class="text-4xl">
+              <span class="text-primary">External </span> Coverage
+            </h1>
+            <hr class="flex-1 h-1 bg-primary border-0" />
+          </div>
+          <div class="mt-10 flex justify-center">
+            <div
+              id="external-news-container"
+              class="w-full flex flex-col gap-2 max-w-4xl"
+            >
+              <!-- script below -->
+            </div>
+          </div>
+        </div>
+
+        <div class="">
+          <div class="w-full flex items-center gap-5 pb-2">
+            <h1 class="text-4xl">
+              <span class="text-primary">Mention </span> News
+            </h1>
+            <hr class="flex-1 h-1 bg-primary border-0" />
+          </div>
+          <div class="mt-10 flex justify-center">
+            <div
+              id="mention-news-container"
+              class="w-full flex flex-col gap-2 max-w-4xl"
+            >
+              <!-- script below -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <footer
+        class="mt-10 flex flex-col items-center justify-center py-5 gap-3 bg-neutral-950"
+      >
+        <a href="#"
+          ><img
+            src="/public/images/logo/light-nesa-logo.png"
+            alt="Nesa Logo"
+            class="h-20 object-scale-down"
+        /></a>
+        <nav class="bg-transparent flex justify-center w-full">
+          <div class="hidden lg:flex items-center gap-8 font-medium text-base">
+            <a
+              href="./index.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Home</a
+            >
+            <a
+              href="./about-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >About Us</a
+            >
+            <a
+              href="./events-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Events</a
+            >
+            <a
+              href="./games-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Games</a
+            >
+            <a
+              href="./news-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >News</a
+            >
+            <a
+              href="./contact-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Contact Us</a
+            >
+            <a
+              href="./certificate-page.html"
+              class="hover:text-primary transform ease-in-out duration-200"
+              >Certificates</a
+            >
+          </div>
+        </nav>
+        <div class="text-2xl flex gap-5">
+          <a
+            href="#"
+            class="p-1 text-white hover:scale-125 duration-200 transform ease-in-out"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a
+            href="#"
+            class="p-1 text-white hover:scale-125 duration-200 transform ease-in-out"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+          <a
+            href="#"
+            class="p-1 text-white hover:scale-125 duration-200 transform ease-in-out"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+        <p class="text-sm text-gray-500 flex gap-2">
+          © 2024 NESA . <a href="#" class="text-white"> Privacy Policy</a>
+        </p>
+      </footer>
     </div>
   </body>
+
+  <script>
+    const external_news_container = document.getElementById(
+      "external-news-container"
+    );
+    const externalNewsDivs = mock_news
+      .filter((news) => news.type === "external")
+      .slice(0, 3)
+      .map(
+        (news) => `
+      <a href="#" class="h-full flex gap-5 border-solid border-2 border-transparent hover:border-gray-900 transform duration-100 ease-in-out p-1">
+                  <div class="h-24 rounded-md overflow-hidden">
+                    <img
+                      src="/public/images/news/news-card.jpg"
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h1 class="text-lg font-semibold">
+                      Unleash Your Adventure: Taking a Look at the City Surfer
+                    </h1>
+                    <h6 class="text-sm font-medium text-gray-600">
+                      June 21, 2023
+                    </h6>
+                  </div>
+                </a>
+    `
+      );
+    external_news_container.innerHTML = externalNewsDivs.join("");
+  </script>
+
+  <script>
+    const recent_news_container = document.getElementById(
+      "recent-news-container"
+    );
+    const recentNewsDivs = mock_news.slice(0, 4).map(
+      (news) => `
+     <a href="#" class="h-full flex gap-5 border-solid border-2 border-transparent hover:border-gray-900 transform duration-100 ease-in-out p-1">
+                  <div class="h-24 rounded-md overflow-hidden">
+                    <img
+                      src="/public/images/news/news-card.jpg"
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h1 class="text-lg font-semibold">
+                      Unleash Your Adventure: Taking a Look at the City Surfer
+                    </h1>
+                    <h6 class="text-sm font-medium text-gray-600">
+                      June 21, 2023
+                    </h6>
+                  </div>
+                </a>
+    `
+    );
+    recent_news_container.innerHTML = recentNewsDivs.join("");
+  </script>
+
+  <script>
+    const mention_news_container = document.getElementById(
+      "mention-news-container"
+    );
+    const mentionNewsDivs = mock_news
+      .filter((news) => news.type === "mention")
+      .slice(0, 3)
+      .map(
+        (news) => `
+      <a href="#" class="h-full flex gap-5 border-solid border-2 border-transparent hover:border-gray-900 transform duration-100 ease-in-out p-1">
+                  <div class="h-24 rounded-md overflow-hidden">
+                    <img
+                      src="/public/images/news/news-card.jpg"
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h1 class="text-lg font-semibold">
+                      Unleash Your Adventure: Taking a Look at the City Surfer
+                    </h1>
+                    <h6 class="text-sm font-medium text-gray-600">
+                      June 21, 2023
+                    </h6>
+                  </div>
+                </a>
+    `
+      );
+    mention_news_container.innerHTML = mentionNewsDivs.join("");
+  </script>
 </html>
