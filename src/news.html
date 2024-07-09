@@ -94,9 +94,9 @@
         </nav>
       </div>
 
-      <div class="mt-10">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
-          <div class="relative flex flex-col gap-5">
+      <div class="relative mt-10">
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-5">
+          <div class="col-span-2 relative flex flex-col gap-5">
             <div class="w-full flex flex-col gap-5 divide-gray-800">
               <hr class="bg-base-color h-2 border-0 w-32" />
               <h1 class="font-bold text-2xl">
@@ -134,8 +134,8 @@
               </p>
             </div>
           </div>
-          <div class="flex flex-col items-center">
-            <div class="bg-background px-0 lg:px-5 w-full">
+          <div class="flex flex-col items-center mt-10 xl:mt-0">
+            <div class="bg-background px-0 w-full">
               <div class="flex flex-col gap-3 w-full">
                 <div class="w-full flex items-center gap-5 pb-2">
                   <h1 class="text-3xl">
@@ -143,7 +143,10 @@
                   </h1>
                   <hr class="flex-1 h-1 bg-base-color border-0" />
                 </div>
-                <div id="recent-news-container" class="flex flex-col gap-3">
+                <div
+                  id="recent-news-container"
+                  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-3"
+                >
                   <!-- script below -->
                 </div>
               </div>
@@ -175,7 +178,7 @@
           <div class="mt-5 flex flex-col items-center">
             <div
               id="external-news-container"
-              class="w-full grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5"
+              class="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5"
             >
               <!-- script below -->
             </div>
@@ -265,30 +268,27 @@
       .slice(0, 3)
       .map(
         (news) => `
-        <div>
+         <a href="/news-description.html" class="group relative">
               <div
-                class="h-[200px] w-full rounded-xl relative overflow-hidden hover:shadow-sm "
+                class="h-[300px] w-full rounded-xl relative overflow-hidden hover:shadow-sm "
               >
                 <img
                   src="/public/images/news/news-card.jpg"
                   alt=""
-                  class="h-full w-full object-cover hover:scale-105 transform duration-300 ease-in-out"
+                  class="h-full w-full object-cover group-hover:scale-105 transform duration-300 ease-in-out"
                 />
               </div>
-              <div class="py-5 border-solid border-b border-x-0 border-t-0">
-                <div class="flex flex-col h-full gap-2 justify-end">
-                  <p class="text-xs text-gray-600 flex gap-2">
-                    <span class="flex items-center gap-2 "><ion-icon name="calendar-outline" class="text-base-color"></ion-icon>May 15, 2024</span>
+              <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black bg-opacity-50 p-5">
+                <div class="flex flex-col h-full gap-2 justify-end font-semibold">
+                  <p class="text-sm flex gap-2">
+                    <span class="flex items-center gap-2 text-gray-200"><ion-icon name="calendar-outline" class="text-base-color"></ion-icon>May 15, 2024</span>
                     <span> | </span>
-                    <span class="flex items-center gap-2 "><ion-icon name="person-outline" class="text-base-color"></ion-icon>NESA</span>
+                    <span class="flex items-center gap-2 text-gray-200"><ion-icon name="person-outline" class="text-base-color"></ion-icon>NESA</span>
                   </p>
-                  <h1 class="text-lg font-semibold">Valley of Legends Esports Tournament</h1>
-                  <a href="#" class="text-xs text-base-color no-underline flex items-center gap-2"
-                    >More Info <ion-icon name="arrow-forward-outline"></ion-icon></a
-                  >
+                  <h1 class="text-xl font-bold flex flex-wrap">${news.title}</h1>
                 </div>
               </div>
-              </div>
+            </a>
     `
       );
     external_news_container.innerHTML = externalNewsDivs.join("");
@@ -298,19 +298,19 @@
     const recent_news_container = document.getElementById(
       "recent-news-container"
     );
-    const recentNewsDivs = mock_news.slice(0, 4).map(
+    const recentNewsDivs = mock_news.slice(0, 6).map(
       (news) => `
-     <a href="#" class="h-full flex gap-3 border-solid border-2 border-transparent hover:border-gray-900 transform duration-100 ease-in-out p-1">
-                  <div class="h-24 rounded-md overflow-hidden">
+     <a href="#" class="h-full grid grid-cols-3 sm:grid-cols-4 md:grid-cols-2 xl:grid-cols-3 gap-2 border-solid border-2 border-transparent hover:border-gray-900 transform duration-100 ease-in-out p-1">
+                  <div class="col-span-1 h-auto w-auto rounded-md overflow-hidden">
                     <img
                       src="/public/images/news/news-card.jpg"
                       alt=""
                       class="h-full w-full object-cover"
                     />
                   </div>
-                  <div class="flex flex-col gap-1">
-                    <h1 class="text-base font-semibold">
-                      Unleash Your Adventure: Taking a Look at the City Surfer
+                  <div class="col-span-2 sm:col-span-3 md:col-span-2 flex flex-col gap-1">
+                    <h1 class="text-base font-semibold flex flex-wrap ">
+                      ${news.title}
                     </h1>
                     <h6 class="text-sm font-medium text-gray-600">
                       June 21, 2023
@@ -320,36 +320,5 @@
     `
     );
     recent_news_container.innerHTML = recentNewsDivs.join("");
-  </script>
-
-  <script>
-    const mention_news_container = document.getElementById(
-      "mention-news-container"
-    );
-    const mentionNewsDivs = mock_news
-      .filter((news) => news.type === "mention")
-      .slice(0, 3)
-      .map(
-        (news) => `
-      <a href="#" class="h-full flex gap-5 border-solid border-2 border-transparent hover:border-gray-900 transform duration-100 ease-in-out p-1">
-                  <div class="h-24 rounded-md overflow-hidden">
-                    <img
-                      src="/public/images/news/news-card.jpg"
-                      alt=""
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div class="flex flex-col gap-1">
-                    <h1 class="text-lg font-semibold">
-                      Unleash Your Adventure: Taking a Look at the City Surfer
-                    </h1>
-                    <h6 class="text-sm font-medium text-gray-600">
-                      June 21, 2023
-                    </h6>
-                  </div>
-                </a>
-    `
-      );
-    mention_news_container.innerHTML = mentionNewsDivs.join("");
   </script>
 </html>

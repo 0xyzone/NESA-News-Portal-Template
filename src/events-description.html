@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Certificate Vlaidation Center</title>
+    <title>NESA:Events Description</title>
+
     <link rel="stylesheet" href="/public/css/output.css" />
     <link rel="stylesheet" href="/public/css/style.css" />
 
@@ -11,7 +12,18 @@
       src="https://kit.fontawesome.com/0a09f83869.js"
       crossorigin="anonymous"
     ></script>
+
+    <script src="/public/mock/mock-events.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <script src="/public/js/script.js"></script>
   </head>
@@ -19,6 +31,7 @@
     <div
       class="px-10 md:px-20 xl:px-32 pb-5 min-w-screen w-full min-h-svh h-full bg-background text-white"
     >
+      <!-- navbar -->
       <div class="relative py-5">
         <nav class="flex justify-between w-full bg-neutral-950 pr-2 lg:pr-4">
           <div>
@@ -83,53 +96,40 @@
         </nav>
       </div>
 
-      <div class="grid grid-cols-1 gap-10">
-        <div class="flex flex-col gap-2 justify-center">
-          <div class="h-full flex items-center gap-2 text-xs">
-            <h1 class="text-3xl font-normal">Certificates</h1>
-            <div class="relative w-full">
-              <h1 id="info-button"
-                class="cursor-pointer w-max bg-white text-black rounded-full text-base h-5 p-2 flex flex-col items-center justify-center overflow-hidden"
-              >
-                <i class="fa-solid fa-info"></i>
-              </h1>
-              <p id="info-content"
-                class="hidden w-max bg-white text-neutral-950 absolute top-1/2 left-10 -translate-y-1/2 text-xs font-normal p-2 flex-wrap"
-              >
-                Search for Certificates presented by NESA here with
-                certificate ID
-              </p>
-            </div>
-          </div>
-
-          <input
-            type="text"
-            name=""
-            id=""
-            placeholder="Type Certificate ID (For eg. 0001)"
-            class="text-lg text-background p-3 border-base-color focus:outline-none border-0"
-          />
-          <div class="flex w-full justify-end">
-            <button class="button-styled">Look Up</button>
-          </div>
-        </div>
-      </div>
-
       <div class="mt-5">
-        <div class="mt-5 flex flex-col gap-5">
-          <h1
-            class="font-medium text-gray-500 text-base py-2 border-solid border-x-0 border-y border-gray-500"
-          >
-            Search Results for: 0001
+        <h1
+          class="text-3xl border-solid border-b border-x-0 border-t-0 pb-5 border-gray-600 flex items-center gap-2"
+        >
+         <img src="/public/images/nesa/event-icon.png" alt="" class="h-10 aspect-square"> Nepal Esports Championship: The Ultimate Battle of Champions
+        </h1>
+
+        <div class="event-content pt-5">
+          <h1>Event Name: Nepal Esports Championship 2018</h1>
+          <h1>Venue: Bhrikuti Mandap, Kathmandu, Nepal</h1>
+          <h1>Registration:</h1>
+          <h1>
+            From: 22nd June, 2018 To: 22nd July, 2018, Extended to 26th July,
+            2018
           </h1>
-          <div class="h-full w-full flex flex-wrap gap-5">
-            <a data-fslightbox="first-lightbox" href="/public/images/certificates/certificate-of-appreciation.jpg">
-              <img
-                src="/public/images/certificates/certificate-of-appreciation.jpg"
-                alt=""
-                class="h-60 sm:h-72 w-auto object-scale-down"
-            /></a>
-          </div>
+          <h1>Qualifications Start: 28th July, 2018</h1>
+          <h1>Main Event: 17th and 18th August, 2018</h1>
+          <h1>Click to Register</h1>
+          <h1>
+            Registration Link:
+            http://206.189.73.94/esports/championship/registration
+          </h1>
+          <h1>For registration:</h1>
+          <p>
+            Prepare digital copy of passport photo of each player Prepare
+            identification document, it can be either birth certificate,
+            citizenship or passport Check whether player’s age comply with
+            championship’s rule, for CS:GO 16 years and above and for Dota2 15
+            years and above [For both document size should be less than 400 kb]
+            Note: After submitting registration form you need to download
+            general terms and conditions file and get signed by each player and
+            submit to registration desk with entry fee (NPR 2500.00) for valid
+            registration.
+          </p>
         </div>
       </div>
 

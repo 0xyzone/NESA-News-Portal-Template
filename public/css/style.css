@@ -128,3 +128,14 @@ nav a {
 }
 
 /* about us content first letter css ends */
+
+
+/* event description conten begins */
+
+.event-content h1,h2,h3,h4,h5,h6,p,a{
+  font-size: 16px;
+  font-family: 400;
+  padding-bottom: 10px;
+}
+
+/* event description conten ends */

@@ -30,6 +30,7 @@
     <div
       class="relative px-10 md:px-20 xl:px-32 pb-5 min-w-screen w-full min-h-svh h-full text-white bg-background"
     >
+      <!-- navbar  -->
       <div class="relative py-5">
         <nav class="flex justify-between w-full bg-neutral-950 pr-2 lg:pr-4">
           <div>
@@ -200,7 +201,9 @@
 
       <!-- esports games -->
       <div class="mt-20 lg:mt-40 gap-10">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-3">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-3"
+        >
           <div class="flex flex-col gap-5 pl-0 mb-2 sm:mb-0">
             <div class="flex flex-col gap-3">
               <h1 class="text-sm text-base-color">OUR GAMES</h1>
@@ -397,31 +400,27 @@
     const news_container = document.getElementById("news-container");
     const newsDivs = mock_news.slice(0, 3).map(
       (news) => `
-               <div>
+               <a href="/news-description.html" class="group relative">
               <div
                 class="h-[200px] xl:h-[300px] w-full rounded-xl relative overflow-hidden hover:shadow-sm "
               >
                 <img
                   src="/public/images/news/news-card.jpg"
                   alt=""
-                  class="h-full w-full object-cover hover:scale-105 transform duration-300 ease-in-out"
+                  class="h-full w-full object-cover group-hover:scale-105 transform duration-300 ease-in-out"
                 />
               </div>
-              <div class="py-5 border-solid border-b border-x-0 border-t-0">
-                <div class="flex flex-col h-full gap-2 justify-end">
-                  <span class="w-max text-xs text-white bg-base-color p-1">Multiplayer</span>
-                  <p class="text-xs text-gray-600 flex gap-2">
-                    <span class="flex items-center gap-2 "><ion-icon name="calendar-outline" class="text-base-color"></ion-icon>May 15, 2024</span>
+              <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black bg-opacity-50 p-5">
+                <div class="flex flex-col h-full gap-2 justify-end font-semibold">
+                  <p class="text-sm flex gap-2">
+                    <span class="flex items-center gap-2 text-gray-200"><ion-icon name="calendar-outline" class="text-base-color"></ion-icon>May 15, 2024</span>
                     <span> | </span>
-                    <span class="flex items-center gap-2 "><ion-icon name="person-outline" class="text-base-color"></ion-icon>NESA</span>
+                    <span class="flex items-center gap-2 text-gray-200"><ion-icon name="person-outline" class="text-base-color"></ion-icon>NESA</span>
                   </p>
-                  <h1 class="text-lg font-semibold">Valley of Legends Esports Tournament</h1>
-                  <a href="#" class="text-xs text-base-color no-underline flex items-center gap-2"
-                    >More Info <ion-icon name="arrow-forward-outline"></ion-icon></a
-                  >
+                  <h1 class="text-xl font-bold">${news.title}</h1>
                 </div>
               </div>
-            </div>
+            </a>
     `
     );
     news_container.innerHTML = newsDivs.join("");
