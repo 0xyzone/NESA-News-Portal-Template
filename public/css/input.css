@@ -5,10 +5,10 @@
 
 @layer base{
     .contact-form-input{
-        @apply p-2 border border-x-0 border-t-0 bg-black border-b-primary focus:outline-none text-white text-xl;
+        @apply w-full p-2 border border-x-0 border-t-0 bg-black border-b-base-color focus:outline-none text-white text-xl;
     }
 
     .button-styled{
-        @apply w-max px-6 py-2 text-base bg-primary text-white border-none cursor-pointer font-medium no-underline;
+        @apply w-max px-6 py-2 text-base bg-base-color text-white border-none cursor-pointer font-medium no-underline;
     }
 }

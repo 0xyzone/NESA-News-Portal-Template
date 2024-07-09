@@ -6,4 +6,8 @@ $(document).ready(function(){
     $("#close-mobile-nav").click(function(){
         $("#navbar").toggleClass("hidden");
     })
+
+    $("#info-button").click(function(){
+        $("#info-content").toggleClass("hidden");
+    })
 })

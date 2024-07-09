@@ -1,6 +1,6 @@
 const mock_news = [
     {
-        title:"Crafting Seamless Experience",
+        title:"Teen Prodigy Wins Nepal Esports Tournament, Secures Spot in International League",
         description:"Explore the principles and techniques that drive user centric gameplay, ensuring a seamless . . . .",
         author:"NESA",
         published_date: "May 15,2024",
@@ -8,7 +8,7 @@ const mock_news = [
         type:"external"
     },
     {
-        title:"Crafting Seamless Experience",
+        title:"Local Heroes: Nepali Esports Team Triumphs in Regional MOBA Championship",
         description:"Explore the principles and techniques that drive user centric gameplay, ensuring a seamless . . . .",
         author:"NESA",
         published_date: "May 15,2024",
@@ -16,7 +16,7 @@ const mock_news = [
         type:"external"
     },
     {
-        title:"Crafting Seamless Experience",
+        title:"Charity Stream: Nepali Esports Community Raises Funds for Disaster Relief",
         description:"Explore the principles and techniques that drive user centric gameplay, ensuring a seamless . . . .",
         author:"NESA",
         published_date: "May 15,2024",
