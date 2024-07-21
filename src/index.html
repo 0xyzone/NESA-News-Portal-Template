@@ -298,7 +298,7 @@
             <div
               class="h-full w-full flex flex-col gap-2 items-center justify-center"
             >
-              <h1 class="text-5xl uppercase font-bold text-center">
+              <h1 class="text-base md:text-xl: lg:text-3xl 2xl:text-5xl uppercase font-bold text-center">
                 Are You Ready To Join?
               </h1>
               <div class="text-2xl flex gap-5 mt-5">
@@ -402,7 +402,7 @@
       (news) => `
                <a href="/news-description.html" class="group relative">
               <div
-                class="h-[200px] xl:h-[300px] w-full rounded-xl relative overflow-hidden hover:shadow-sm "
+                class="h-[250px] xl:h-[300px] w-full rounded-xl relative overflow-hidden hover:shadow-sm "
               >
                 <img
                   src="/public/images/news/news-card.jpg"
@@ -411,13 +411,13 @@
                 />
               </div>
               <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black bg-opacity-50 p-5">
-                <div class="flex flex-col h-full gap-2 justify-end font-semibold">
+                <div class="flex flex-col h-full justify-end font-semibold">
                   <p class="text-sm flex gap-2">
                     <span class="flex items-center gap-2 text-gray-200"><ion-icon name="calendar-outline" class="text-base-color"></ion-icon>May 15, 2024</span>
                     <span> | </span>
                     <span class="flex items-center gap-2 text-gray-200"><ion-icon name="person-outline" class="text-base-color"></ion-icon>NESA</span>
                   </p>
-                  <h1 class="text-xl font-bold">${news.title}</h1>
+                  <h1 class="text-base 2xl:text-xl font-bold flex flex-wrap">${news.title}</h1>
                 </div>
               </div>
             </a>

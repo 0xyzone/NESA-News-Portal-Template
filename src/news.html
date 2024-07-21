@@ -270,7 +270,7 @@
         (news) => `
          <a href="/news-description.html" class="group relative">
               <div
-                class="h-[300px] w-full rounded-xl relative overflow-hidden hover:shadow-sm "
+                class="h-[250px] xl:h-[300px] w-full rounded-xl relative overflow-hidden hover:shadow-sm "
               >
                 <img
                   src="/public/images/news/news-card.jpg"
@@ -279,13 +279,13 @@
                 />
               </div>
               <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black bg-opacity-50 p-5">
-                <div class="flex flex-col h-full gap-2 justify-end font-semibold">
+                <div class="flex flex-col h-full justify-end font-semibold">
                   <p class="text-sm flex gap-2">
                     <span class="flex items-center gap-2 text-gray-200"><ion-icon name="calendar-outline" class="text-base-color"></ion-icon>May 15, 2024</span>
                     <span> | </span>
                     <span class="flex items-center gap-2 text-gray-200"><ion-icon name="person-outline" class="text-base-color"></ion-icon>NESA</span>
                   </p>
-                  <h1 class="text-xl font-bold flex flex-wrap">${news.title}</h1>
+                  <h1 class="text-base 2xl:text-xl font-bold flex flex-wrap">${news.title}</h1>
                 </div>
               </div>
             </a>
@@ -301,15 +301,15 @@
     const recentNewsDivs = mock_news.slice(0, 6).map(
       (news) => `
      <a href="#" class="h-full grid grid-cols-3 sm:grid-cols-4 md:grid-cols-2 xl:grid-cols-3 gap-2 border-solid border-2 border-transparent hover:border-gray-900 transform duration-100 ease-in-out p-1">
-                  <div class="col-span-1 h-auto w-auto rounded-md overflow-hidden">
+                  <div class="col-span-1 h-24 w-auto rounded-md overflow-hidden">
                     <img
                       src="/public/images/news/news-card.jpg"
                       alt=""
-                      class="h-full w-full object-cover"
+                      class="h-24 w-full object-cover"
                     />
                   </div>
                   <div class="col-span-2 sm:col-span-3 md:col-span-2 flex flex-col gap-1">
-                    <h1 class="text-base font-semibold flex flex-wrap ">
+                    <h1 class="text-sm 2xl:text-base font-semibold flex flex-wrap ">
                       ${news.title}
                     </h1>
                     <h6 class="text-sm font-medium text-gray-600">
