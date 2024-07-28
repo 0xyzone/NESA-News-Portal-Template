@@ -301,6 +301,10 @@
   height: 5rem
 }
 
+.h-24 {
+  height: 6rem
+}
+
 .h-5 {
   height: 1.25rem
 }
@@ -313,12 +317,12 @@
   height: 200px
 }
 
-.h-\[260px\] {
-  height: 260px
+.h-\[250px\] {
+  height: 250px
 }
 
-.h-\[300px\] {
-  height: 300px
+.h-\[260px\] {
+  height: 260px
 }
 
 .h-\[400px\] {
@@ -341,10 +345,6 @@
   height: 60vh
 }
 
-.h-auto {
-  height: auto
-}
-
 .h-full {
   height: 100%
 }
@@ -352,18 +352,6 @@
 .h-max {
   height: -moz-max-content;
   height: max-content
-}
-
-.h-\[250px\] {
-  height: 250px
-}
-
-.h-44 {
-  height: 11rem
-}
-
-.h-24 {
-  height: 6rem
 }
 
 .min-h-svh {
@@ -686,10 +674,6 @@
   padding: 0.5rem
 }
 
-.p-3 {
-  padding: 0.75rem
-}
-
 .p-5 {
   padding: 1.25rem
 }
@@ -704,6 +688,11 @@
   padding-right: 2.5rem
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem
@@ -712,6 +701,16 @@
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem
+}
+
+.py-1\.5 {
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem
 }
 
 .py-10 {
@@ -737,21 +736,6 @@
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem
-}
-
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem
-}
-
-.py-1\.5 {
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem
 }
 
 .pb-2 {
@@ -824,11 +808,6 @@
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem
 }
 
 .text-xs {
@@ -1150,14 +1129,14 @@
     padding-right: 1rem
   }
 
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1
-  }
-
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1
   }
 }
 
@@ -1187,11 +1166,6 @@
     font-size: 3.75rem;
     line-height: 1
   }
-
-  .xl\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem
-  }
 }
 
 @media (min-width: 1536px) {
@@ -1208,11 +1182,6 @@
     line-height: 2rem
   }
 
-  .\32xl\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem
-  }
-
   .\32xl\:text-5xl {
     font-size: 3rem;
     line-height: 1
@@ -1221,5 +1190,10 @@
   .\32xl\:text-base {
     font-size: 1rem;
     line-height: 1.5rem
+  }
+
+  .\32xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem
   }
 }
